@@ -3,6 +3,7 @@
     margin: 0;
     padding: 0;
     font-family: sans-serif;
+    
 }
 body{
     background: rgb(63,94,251);
@@ -49,6 +50,17 @@ body{
     top: 0;
     width: 100%;
     z-index: 1000;
+    animation: showFromSide 1s ease-out 1;
+}
+
+@keyframes showFromSide{
+    0%{
+        transform: translateX(-100%);
+    }
+
+    100%{
+        transform: translateX(0);
+    }
 }
 
 .header_content{
@@ -323,6 +335,37 @@ button:hover{
     font-size: 15px;
     margin-bottom: 10px;
 }
+
+.caption-top {
+    width: 700px;
+    margin: 50px auto 0;
+    border: 5px solid #3e0530;
+    position: relative;
+}
+.caption-top img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+.caption-top h2 {
+    margin: 0;
+    color: white;
+    line-height: 1.1;
+    font-size: 1.2em;
+    font-weight: 200;
+    padding: 10px 20px 10px 10px;
+    border-bottom-right-radius: 20px;
+    background: #3e0530;
+    position: absolute;
+    top: -5px;
+    left: 0;
+    box-shadow: -3px -1px 3px -3px #3e0530, 5px 10px 20px -5px hsla(0, 0%, 0%, .4);
+}
+.date {
+    font-family: "Open Sans", sans-serif;
+    font-size: .7em;
+}
+
 @keyframes slideanim {
     12.5%{
         opacity: 1;
@@ -385,6 +428,9 @@ button:hover{
     .nav{
         display: none;
     }
+    .caption-top{
+        width: auto;
+    }
 }
 
 
@@ -397,52 +443,5 @@ button:hover{
 
 
 * {box-sizing: border-box;}
-.caption-top {
-  width: 700px;
-  margin: 50px auto 0;
-  border: 5px solid #3e0530;
-  position: relative;
-}
-.caption-top img {
-  max-width: 100%;
-  height: auto;
-  display: block;
-}
-.caption-top h2 {
-  margin: 0;
-  color: white;
-  line-height: 1.1;
-  font-size: 1.2em;
-  font-weight: 200;
-  padding: 10px 20px 10px 10px;
-  border-bottom-right-radius: 20px;
-  background: #3e0530;
-  position: absolute;
-  top: -5px;
-  left: 0;
-  box-shadow: -3px -1px 3px -3px #3e0530, 5px 10px 20px -5px hsla(0, 0%, 0%, .4);
-}
-.date {
-  font-family: "Open Sans", sans-serif;
-  font-size: .7em;
-}
 
-.card_two{
-    padding-top: 50px;
-    padding-left: 20px;
-    padding-right: 20px;
-}
 
-.video {
-    z-index: -2;
-  }
-  
-  .overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.5);
-    z-index: -1;
-  }
